@@ -127,6 +127,7 @@
     }
 
     .ctm-h1 {
+        font-family: 'Pushster';
         color: #492774;
     }
 </style>
