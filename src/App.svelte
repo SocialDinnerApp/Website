@@ -2,7 +2,7 @@
 	import LandingPage from './components/LandingPage/LandingPage.svelte'
 </script>
 
-<main class="container">
+<main class="container-fluid">
 	<LandingPage />
 </main>
 
