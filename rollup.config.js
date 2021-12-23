@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
+import copy from 'rollup-plugin-copy';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,6 +51,13 @@ export default {
 		// a separate file - better for performance
 		css({ output: 'bundle.css' }),
 
+		// Add bootstrap files to public folder
+		copy({
+            targets: [{ 
+                src: 'node_modules/bootstrap/dist/**/*', 
+                dest: 'public/vendor/bootstrap' 
+            }]
+        }),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
