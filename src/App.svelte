@@ -1,9 +1,20 @@
 <script lang="ts">
-	import LandingPage from './components/LandingPage/LandingPage.svelte'
+	import Router from "svelte-spa-router";
+	import LandingPage from "./components/LandingPage/LandingPage.svelte";
+	import SignUp from "./components/SignUp/signup.svelte";
+	import SignIn from "./components/SignIn/signin.svelte";
+	import NotFound from "./components/NotFound/notfound.svelte";
+
+	let routes = {
+		"/": LandingPage,
+		"/signup": SignUp,
+		"/signin": SignIn,
+		"*": NotFound,
+	};
 </script>
 
 <main class="container">
-	<LandingPage />
+	<Router {routes}/>
 </main>
 
 <style>

@@ -1,3 +1,7 @@
+<script>
+    import {push} from 'svelte-spa-router'
+</script>
+
 <div
     class="row justify-content-center align-items-center bg-light"
     style="padding: 30px 0;"
@@ -17,7 +21,7 @@
             Einfach mit wenigen Klicken ein Event für eure Studenten erstellen.
         </p>
         <div class="d-flex justify-content-center" style="margin-top: 50px;">
-            <button type="button" class="btn ctm-btn"> Event erstellen </button>
+            <button type="button" class="btn ctm-btn" on:click={() => push('/signin')}> Event erstellen </button>
         </div>
     </div>
 </div>

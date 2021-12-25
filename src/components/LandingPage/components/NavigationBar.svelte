@@ -21,8 +21,7 @@
                 id="navbarNavAltMarkup"
             >
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#">Wie funktioniert das?</a>
-                    <a class="nav-link" href="#">Login für Veranstalter</a>
+                    <a class="nav-link" href="#/signup">Login für Veranstalter</a>
                 </div>
             </div>
         </div>
