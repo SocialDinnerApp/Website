@@ -7,7 +7,7 @@
     style="padding: 30px 0;"
 >
     <div class="col-lg-5">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center w-50">
             <img
                 src="images/landingpage_2.png"
                 alt="Have fun"

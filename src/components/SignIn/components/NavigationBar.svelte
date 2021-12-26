@@ -20,7 +20,7 @@
             id="navbarNavAltMarkup"
         >
             <div class="navbar-nav">
-                <a class="nav-link" href="#/signin">Anmelden</a>
+                <a class="nav-link" href="#/signup">Registrieren</a>
             </div>
         </div>
     </div>

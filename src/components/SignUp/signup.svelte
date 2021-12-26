@@ -1,6 +1,6 @@
 <script>
     import NavigationBar from "./components/NavigationBar.svelte";
-    import RegisterCard from "./components/RegisterCard.svelte";
+    import SignUpCard from "./components/SignUpCard.svelte";
 </script>
 
 <div class="vh-100 ctm-bg-img">
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-lg-12">
-            <RegisterCard />
+            <SignUpCard />
         </div>
     </div>
 </div>

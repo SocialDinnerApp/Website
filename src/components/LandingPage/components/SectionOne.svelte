@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="col-lg-5">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center w-75">
             <img
                 src="images/landingpage_1.png"
                 alt="Have fun"
