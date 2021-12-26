@@ -13,7 +13,7 @@
 	};
 </script>
 
-<main class="container">
+<main class="mx-auto" style="max-width: 1920px;">
 	<Router {routes}/>
 </main>
 
