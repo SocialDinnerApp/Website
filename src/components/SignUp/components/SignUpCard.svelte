@@ -1,6 +1,6 @@
 <div class="card shadow text-left ctm-card" style="border-radius: 2%">
     <div class="card-body">
-        <form class="px-4">
+        <form class="p-4">
             <div class="text-center">
                 <h3 class="mb-5" style="color: #492774">Registrierung</h3>
             </div>

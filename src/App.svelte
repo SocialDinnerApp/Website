@@ -4,17 +4,21 @@
 	import SignUp from "./components/SignUp/signup.svelte";
 	import SignIn from "./components/SignIn/signin.svelte";
 	import NotFound from "./components/NotFound/notfound.svelte";
+	import MyEvents from "./components/MyEvents/MyEvents.svelte";
+	import Mystatistics from "./components/MyStatistics/mystatistics.svelte";
 
 	let routes = {
 		"/": LandingPage,
 		"/signup": SignUp,
 		"/signin": SignIn,
+		"/myevents": MyEvents,
+		"/mystatistics": Mystatistics,
 		"*": NotFound,
 	};
 </script>
 
 <main class="mx-auto" style="max-width: 1920px;">
-	<Router {routes}/>
+	<Router {routes} />
 </main>
 
 <style>

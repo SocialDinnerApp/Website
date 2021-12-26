@@ -1,6 +1,10 @@
+<script>
+    import {push} from 'svelte-spa-router'
+</script>
+
 <div class="card shadow text-left ctm-card" style="border-radius: 2%">
     <div class="card-body">
-        <form class="px-4">
+        <form class="p-4">
             <div class="text-center">
                 <h3 class="mb-5" style="color: #492774">Anmeldung</h3>
             </div>
@@ -13,7 +17,7 @@
                 <input type="password" class="form-control" id="password" />
             </div>
             <div class="text-center">
-                <button type="submit" class="btn ctm-btn">ANMELDEN</button>
+                <button type="submit" class="btn ctm-btn" on:click={() => push('#/myevents')}>ANMELDEN</button>
             </div>
         </form>
     </div>
