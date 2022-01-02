@@ -15,7 +15,7 @@
             </ul>
         </div>
         <div class="d-flex justify-content-center" style="margin-top: 25px;">
-            <button type="button" class="btn ctm-btn">
+            <button type="button" class="btn btn-primary">
                 Downloade die App
             </button>
         </div>
@@ -32,12 +32,6 @@
 </div>
 
 <style>
-    .ctm-btn {
-        background-color: #492774;
-        color: white;
-        padding: 7px 20px;
-    }
-
     .ctm-h1 {
         font-family: 'Pushster';
         color: #492774;

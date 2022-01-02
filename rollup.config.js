@@ -53,11 +53,17 @@ export default {
 
 		// Add bootstrap files to public folder
 		copy({
-            targets: [{ 
-                src: 'node_modules/bootstrap/dist/**/*', 
-                dest: 'public/vendor/bootstrap' 
-            }]
-        }),
+			targets: [
+				{
+					src: 'node_modules/bootstrap/dist/**/*',
+					dest: 'public/vendor/bootstrap'
+				},
+				{
+					src: 'bootstrap.css',
+					dest: 'public/'
+				},
+			]
+		}),
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
