@@ -15,12 +15,12 @@
             />
         </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-5 text-left">
         <h3 class="text-secondary">Erstelle dein Event als Universität.</h3>
         <p class="text-light">
             Einfach mit wenigen Klicken ein Event für eure Studenten erstellen.
         </p>
-        <div class="d-flex justify-content-center" style="margin-top: 50px;">
+        <div class="d-flex justify-content-left" style="margin-top: 20px;">
             <button type="button" class="btn btn-primary" on:click={() => push('/signin')}> Event erstellen </button>
         </div>
     </div>

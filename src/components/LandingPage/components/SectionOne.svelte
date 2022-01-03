@@ -14,7 +14,7 @@
                 <li>Neue Kontakte</li>
             </ul>
         </div>
-        <div class="d-flex justify-content-center" style="margin-top: 25px;">
+        <div class="d-flex justify-content-left" style="margin-top: 25px;">
             <button type="button" class="btn btn-primary">
                 Downloade die App
             </button>
