@@ -9,4 +9,9 @@ $theme-colors: (
   "dark":       #1A1A1A,
 );
 
+$input-focus-border-color: #A785B9;
+$input-btn-focus-width:       .2rem;
+$input-btn-focus-color:       rgba(167, 133, 185, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
 @import 'node_modules/bootstrap/scss/bootstrap';

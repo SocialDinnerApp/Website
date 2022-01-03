@@ -7,7 +7,7 @@
             <h1 class="ctm-h1">Freundschaft geht durch den Magen.</h1>
         </div>
         <div style="margin-top: 15px;">
-            <ul style="color: #7A7A7A">
+            <ul class="text-light">
                 <li>Flexibel</li>
                 <li>Günstig</li>
                 <li>Spaß</li>

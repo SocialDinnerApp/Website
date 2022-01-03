@@ -3,7 +3,7 @@
     style="background-color: white;"
 >
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Social Dinner</a>
+        <a class="navbar-brand text-secondary" href="#">Social Dinner</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -20,7 +20,7 @@
             id="navbarNavAltMarkup"
         >
             <div class="navbar-nav">
-                <a class="nav-link" href="#/signin">Anmelden</a>
+                <a class="nav-link text-light" href="#/signin">Anmelden</a>
             </div>
         </div>
     </div>

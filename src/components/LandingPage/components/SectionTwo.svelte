@@ -16,8 +16,8 @@
         </div>
     </div>
     <div class="col-lg-5">
-        <h3>Erstelle dein Event als Universität.</h3>
-        <p style="color: #7A7A7A">
+        <h3 class="text-secondary">Erstelle dein Event als Universität.</h3>
+        <p class="text-light">
             Einfach mit wenigen Klicken ein Event für eure Studenten erstellen.
         </p>
         <div class="d-flex justify-content-center" style="margin-top: 50px;">

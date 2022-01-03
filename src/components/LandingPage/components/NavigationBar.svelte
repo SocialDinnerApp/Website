@@ -1,10 +1,10 @@
 <header class="site-header sticky-top">
     <nav
-        class="navbar navbar-expand-lg navbar-light border-bottom"
+        class="navbar navbar-expand-lg border-bottom navbar-light"
         style="background-color: white;"
     >
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Social Dinner</a>
+            <a class="navbar-brand text-secondary" href="#">Social Dinner</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -21,7 +21,7 @@
                 id="navbarNavAltMarkup"
             >
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#/signup">Login für Veranstalter</a>
+                    <a class="nav-link text-light" href="#/signup">Login für Veranstalter</a>
                 </div>
             </div>
         </div>
