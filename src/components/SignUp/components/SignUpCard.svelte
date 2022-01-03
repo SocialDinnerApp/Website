@@ -2,7 +2,7 @@
     <div class="card-body">
         <form class="p-4">
             <div class="text-center">
-                <h3 class="mb-5 text-primary">Registrierung</h3>
+                <h3 class="mb-5 text-secondary">Registrierung</h3>
             </div>
             <div class="mb-3">
                 <label for="userName" class="form-label">Username</label>
