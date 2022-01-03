@@ -17,7 +17,7 @@
                 <input type="password" class="form-control" id="password" />
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary" on:click={() => push('#/myevents')}>ANMELDEN</button>
+                <button type="submit" class="btn btn-primary" on:click={() => push('#/newevent')}>ANMELDEN</button>
             </div>
         </form>
     </div>

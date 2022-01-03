@@ -6,6 +6,7 @@
 	import NotFound from "./components/NotFound/notfound.svelte";
 	import MyEvents from "./components/MyEvents/MyEvents.svelte";
 	import Mystatistics from "./components/MyStatistics/mystatistics.svelte";
+	import NewEvent from "./components/NewEvent/newevent.svelte";
 
 	let routes = {
 		"/": LandingPage,
@@ -13,6 +14,7 @@
 		"/signin": SignIn,
 		"/myevents": MyEvents,
 		"/mystatistics": Mystatistics,
+		"/newevent": NewEvent,
 		"*": NotFound,
 	};
 </script>
