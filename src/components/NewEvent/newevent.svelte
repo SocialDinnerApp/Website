@@ -1,5 +1,6 @@
 <script>
     import NavigationBar from "./components/NavigationBar.svelte";
+    import Confirmation from "./components/Confirmation.svelte";
 </script>
 
 <NavigationBar />
@@ -51,21 +52,6 @@
                         placeholder="Maximale Teilnehmerzahl"
                     />
                 </div>
-                <!-- <div class="d-flex my-3">
-                    <input
-                        type="text"
-                        class="form-control me-5 p-2 border-secondary"
-                        id="dateRegDeadl"
-                        placeholder="Datum der Registrierungsdeadline"
-                    />
-
-                    <input
-                        type="text"
-                        class="form-control p-2 border-secondary"
-                        id="timeRegDeadl"
-                        placeholder="Uhrzeit der Registrierungsdeadline"
-                    />
-                </div> -->
                 <div class="row justify-content-left">
                     <div class="col-sm-6">
                         <input
@@ -166,8 +152,17 @@
         </div>
     </div>
     <div class="d-flex justify-content-center mt-5">
-        <button type="button" class="btn btn-primary py-2 px-3">
+        <button
+            type="button"
+            class="btn btn-primary py-2 px-3"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+        >
             Event erstellen
         </button>
     </div>
 </div>
+
+<!-- Modal -->
+<Confirmation/>
+
