@@ -7,12 +7,14 @@
 	import MyEvents from "./components/MyEvents/MyEvents.svelte";
 	import Mystatistics from "./components/MyStatistics/mystatistics.svelte";
 	import NewEvent from "./components/NewEvent/newevent.svelte";
+	import EventDetails from "./components/EventDetails/eventdetails.svelte";
 
 	let routes = {
 		"/": LandingPage,
 		"/signup": SignUp,
 		"/signin": SignIn,
 		"/myevents": MyEvents,
+		"/myevents/:eventId": EventDetails,
 		"/mystatistics": Mystatistics,
 		"/newevent": NewEvent,
 		"*": NotFound,
