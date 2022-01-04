@@ -6,9 +6,16 @@ $theme-colors: (
   "info":       #ffffffd8,
   "warning":    #e9db16,
   "danger":     #af2323,
-  "light":      #7A7A7A,
+  "light":      #8d8d8d,
   "dark":       #1A1A1A,
 );
+
+// Customize color of navigation tabs
+$nav-link-color: #8d8d8d;
+$nav-link-hover-color: #8d8d8d;
+$nav-tabs-link-active-color: #492774;
+$nav-tabs-border-color:             #492774;
+$nav-tabs-link-active-border-color: #492774 #492774 #fff;
 
 // Customize button color of file upload
 $form-file-button-color:          #fff;
