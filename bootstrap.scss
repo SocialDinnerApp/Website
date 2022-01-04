@@ -1,3 +1,4 @@
+// Customize color themes
 $theme-colors: (
   "primary":    #492774,
   "secondary":  #A785B9,
@@ -9,6 +10,11 @@ $theme-colors: (
   "dark":       #1A1A1A,
 );
 
+// Customize button color of file upload
+$form-file-button-color:          #fff;
+$form-file-button-bg:             #492774;
+
+// Customize focus effect of inputs
 $input-focus-border-color: #A785B9;
 $input-btn-focus-width:       .2rem;
 $input-btn-focus-color:       rgba(167, 133, 185, .25);
