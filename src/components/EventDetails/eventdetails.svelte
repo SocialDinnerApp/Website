@@ -3,7 +3,7 @@
     import Details from "./components/details.svelte";
     import Insights from "./components/insights.svelte";
 
-    var isInformation = true;
+    var isInformation = false;
 
     export let params = {};
 </script>

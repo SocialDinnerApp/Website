@@ -62,6 +62,10 @@ export default {
 					src: 'bootstrap.css',
 					dest: 'public/'
 				},
+				{
+					src: 'bootstrap.css.map',
+					dest: 'public/'
+				},
 			]
 		}),
 		// If you have external dependencies installed from

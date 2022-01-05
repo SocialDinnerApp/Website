@@ -21,7 +21,7 @@
                 id="navbarNavAltMarkup"
             >
                 <div class="navbar-nav">
-                    <a class="nav-link text-light" href="#/signup">Login für Veranstalter</a>
+                    <a class="nav-link text-light" href="#/signin">Login für Veranstalter</a>
                 </div>
             </div>
         </div>
