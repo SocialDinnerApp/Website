@@ -9,7 +9,7 @@
 </script>
 
 <!-- <p>{params.eventId}</p> -->
-<NavigationBar />
+<NavigationBar route="/myevents"/>
 <ul class="nav nav-tabs mx-5 mt-5">
     <li class="nav-item">
         <h5 class="nav-link {isInformation ? "active" : ""}" on:click={() => isInformation = true}>Details</h5>
