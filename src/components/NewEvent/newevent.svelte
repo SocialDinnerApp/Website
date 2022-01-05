@@ -1,9 +1,9 @@
 <script>
-    import NavigationBar from "./components/NavigationBar.svelte";
+    import NavigationBar from "../NavigationBar/navigationbar.svelte";
     import Confirmation from "./components/Confirmation.svelte";
 </script>
 
-<NavigationBar />
+<NavigationBar route="/newevent"/>
 <div
     class="row g-5 justify-content-evenly mx-5 my-5 px-3 pb-5 border border-secondary rounded shadow"
 >

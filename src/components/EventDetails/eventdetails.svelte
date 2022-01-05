@@ -1,9 +1,9 @@
 <script>
-    import NavigationBar from "./components/NavigationBar.svelte";
+    import NavigationBar from "../NavigationBar/navigationbar.svelte";
     import Details from "./components/details.svelte";
     import Insights from "./components/insights.svelte";
 
-    var isInformation = false;
+    var isInformation = true;
 
     export let params = {};
 </script>

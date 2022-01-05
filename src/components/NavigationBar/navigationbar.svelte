@@ -1,3 +1,7 @@
+<script>
+    export let route = "/mystatistics";
+</script>
+
 <nav
     class="navbar navbar-expand-lg navbar-light border-bottom"
     style="background-color: white;"
@@ -20,14 +24,14 @@
             id="navbarNavAltMarkup"
         >
             <div class="navbar-nav">
-                <a class="nav-link text-light" href="#/mystatistics">Statistiken</a>
+                <a class="nav-link {route == "/mystatistics" ? "text-primary": "text-light"}" href="#/mystatistics">Statistiken</a>
             </div>
             <div class="navbar-nav">
-                <a class="nav-link text-light" href="#/myevents">Meine Events</a
+                <a class="nav-link {route == "/myevents" ? "text-primary": "text-light"}" href="#/myevents">Meine Events</a
                 >
             </div>
             <div class="navbar-nav">
-                <a class="nav-link text-primary" href="#/newevent">Neues Event</a>
+                <a class="nav-link {route == "/newevent" ? "text-primary": "text-light"}" href="#/newevent">Neues Event</a>
             </div>
             <div class="navbar-nav">
                 <a class="nav-link text-light" href="#/">Abmelden</a>

@@ -1,1 +1,4 @@
-hello from my statistics
+<script>
+    import NavigationBar from "../NavigationBar/navigationbar.svelte";
+</script>
+<NavigationBar/>
