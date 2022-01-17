@@ -9,6 +9,7 @@
 	import NewEvent from "./components/NewEvent/newevent.svelte";
 	import EventDetails from "./components/EventDetails/eventdetails.svelte";
 	import Profile from "./components/Profile/profile.svelte";
+	import ProfileEdit from "./components/Profile/components/profile_edit.svelte";
 
 	let routes = {
 		"/": LandingPage,
@@ -19,6 +20,7 @@
 		"/mystatistics": Mystatistics,
 		"/newevent": NewEvent,
 		"/profile":Profile,
+		"/profile/edit":ProfileEdit,
 		"*": NotFound,
 	};
 </script>
