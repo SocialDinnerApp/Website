@@ -2,21 +2,10 @@
    import NavigationBar from "../NavigationBar/navigationbar.svelte";
   import ProfilePictureCard from "./components/profile_picture_card.svelte";
   import DataCard from "./components/data_card.svelte"
-
-  let info = [
-        {
-            id:1,
-            Firstname: "Niclas",
-            Lastname: "Cramer",
-            Email: "niclascramer@gmail.com",
-            Phone: "01526861666",
-            Adress: "Springlerstraße Mannheim",
-         
-
-        },
-        
-    ];
+import { info } from './components/info'
   
+
+ 
 </script>
 
 <NavigationBar route="/profile" />
@@ -34,7 +23,7 @@
 
         
               <div class="row gutters-sm">
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="margin-top: 20px;">
                        {#each info as info (info.id)}
                       <ProfilePictureCard {info}/>
                       {/each}
@@ -54,3 +43,8 @@
 </div>
 
 
+<style>
+    .card{
+        margin-top: 20px;
+    }
+</style>

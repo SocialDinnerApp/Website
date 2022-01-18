@@ -1,19 +1,26 @@
 <script>
     export let info 
-   
+    //import {info} from "./info"
     console.log(info)
-
-    let fullname= info.Firstname +' '+ info.Lastname
+   
+  //  const i =info[0]
 </script>
 
 <div class="card">
     <div class="card-body">
         <div class="d-flex flex-column align-items-center text-center">
-            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+            <img src={info.image} alt="Admin" class="rounded-circle" width="150">
                 <div class="mt-3">
-                <h4>{fullname}</h4>
-                <p class="text-muted font-size-sm">{info.Adress}</p>
+                <h4>{info.Universität}</h4>
                 </div>
         </div>
     </div>
 </div>
+
+<!-- <style>
+.card {
+ border: 0px;
+
+    }
+
+</style> -->
