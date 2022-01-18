@@ -4,9 +4,9 @@ export const info = [
         Username:"DHBW",
         Universität: "DHBW Mannheim",
         Email: "niclascramer@gmail.com",
-        Phone: "01526861666",
+       
         City: "Mannheim",
-        image: 'images/dhbw.jpg',
+        image: 'images/dhbw_quadrat.jpg',
         password: "DHBW_Passwort",
         faculty: "DHBW_faculty",
 
