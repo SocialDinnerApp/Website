@@ -7,7 +7,7 @@
     import StepFour from "./components/step4.svelte";
     import { fade } from "svelte/transition";
 
-    var curStep = 1;
+    var curStep = 3;
     const totalSteps = 4;
     $: progress = (curStep / totalSteps) * 100;
 </script>

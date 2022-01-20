@@ -1,3 +1,10 @@
+<script lang="ts">
+    import { DateInput } from "date-picker-svelte";
+    let date = new Date()
+    let minDate = new Date(`${date.getFullYear()}-01-01 00:00:00`)
+    let maxDate = new Date(`${date.getFullYear() + 2}-01-01 00:00:00`)
+</script>
+
 <div class="d-flex justify-content-center mt-5">
     <div class="col-lg-7">
         <div class="card shadow border-primary py-4 px-5">
@@ -8,36 +15,23 @@
                         <div class="my-4">
                             <input
                                 type="text"
-                                class="ctm-form-control"
+                                class="form-control border border-primary"
                                 id="maxParticipants"
                                 placeholder="Maximale Teilnehmerzahl"
                             />
                         </div>
-                        <div class="row justify-content-left">
-                            <div class="col-sm-6">
-                                <input
-                                    type="text"
-                                    class="ctm-form-control me-5"
-                                    id="dateRegDeadl"
-                                    placeholder="Datum der Registrierungsdeadline"
-                                />
-                            </div>
-                            <div class="col-sm-6">
-                                <input
-                                    type="text"
-                                    class="ctm-form-control"
-                                    id="timeRegDeadl"
-                                    placeholder="Uhrzeit der Registrierungsdeadline"
-                                />
-                            </div>
-                        </div>
+
                         <div class="my-4">
                             <input
                                 type="text"
-                                class="ctm-form-control"
+                                class="form-control border border-primary"
                                 id="approvedDomains"
                                 placeholder="Freigegebene Domains"
                             />
+                        </div>
+                        <div class="mx-1">
+                            <p class="text-secondary">Datum der Registrierungsdeadline</p>
+                            <DateInput bind:value={date} format="dd.MM.yyyy" min={minDate} max={maxDate}/>
                         </div>
                     </div>
                 </div>

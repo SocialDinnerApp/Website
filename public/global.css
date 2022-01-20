@@ -17,3 +17,12 @@
     outline: none;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+:root {
+    --date-picker-foreground: rgb(117, 117, 117);
+    --date-picker-background: #fff;
+    --date-picker-highlight-border: #a785b9;
+    --date-picker-highlight-shadow: #a785b9;
+    --date-picker-selected-color: #fff;
+    --date-picker-selected-background: #a785b9;
+}
