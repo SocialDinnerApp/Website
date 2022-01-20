@@ -1,8 +1,12 @@
+<script lang="ts">
+    import { fade } from "svelte/transition"
+</script>
+
 <div
     class="row justify-content-center align-items-center"
     style="padding: 30px 0;"
 >
-    <div class="col-lg-5">
+    <div class="col-lg-5" in:fade="{{ delay: 0, duration: 1000 }}" out:fade="{{ delay: 0, duration: 0}}">
         <div>
             <h1 class="ctm-h1">Freundschaft geht durch den Magen.</h1>
         </div>
@@ -20,7 +24,7 @@
             </button>
         </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-5" in:fade="{{ delay: 0, duration: 1000 }}" out:fade="{{ delay: 0, duration: 0}}">
         <div class="d-flex justify-content-center w-75">
             <img
                 src="images/landingpage_1.png"

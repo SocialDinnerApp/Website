@@ -3,6 +3,7 @@
     import Item from "./components/Item.svelte";
     import { push } from "svelte-spa-router";
     import Icon from "@iconify/svelte";
+    import { fade } from "svelte/transition"
 
     var searchpattern: string = "";
     var isOldEvents: boolean = false;
@@ -92,8 +93,8 @@
     </div>
     {#each info as i (i.id)}
         {#if i.name.toLowerCase().includes(searchpattern.toLowerCase())}
-            <div on:click={onClickTile}>
-                <Item item={i} />
+            <div on:click={onClickTile} in:fade="{{ delay: 0, duration: 500 }}" out:fade="{{ delay: 0, duration: 0 }}">
+                <Item item={i}/>
             </div>
         {/if}
     {/each}

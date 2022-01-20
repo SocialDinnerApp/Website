@@ -5,6 +5,7 @@
     import StepTwo from "./components/step2.svelte";
     import StepThree from "./components/step3.svelte";
     import StepFour from "./components/step4.svelte";
+    import { fade } from "svelte/transition";
 
     var curStep = 1;
     const totalSteps = 4;
@@ -33,13 +34,21 @@
         </div>
     </div>
     {#if curStep == 1}
-        <StepOne />
+        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
+            <StepOne />
+        </div>
     {:else if curStep == 2}
-        <StepTwo />
+        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
+            <StepTwo />
+        </div>
     {:else if curStep == 3}
-        <StepThree />
+        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
+            <StepThree />
+        </div>
     {:else if curStep == 4}
-        <StepFour />
+        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
+            <StepFour />
+        </div>
     {/if}
 
     <div class="d-flex justify-content-center mt-5">
@@ -74,4 +83,4 @@
         {/if}
     </div>
 </div>
-<Confirmation/>
+<Confirmation />
