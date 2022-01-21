@@ -22,7 +22,6 @@
     export let timeDessert: string = "";
 
     function validateInput() {
-        console.log('Hello from validate Input')
         if (timeStarter === "") {
             isFormValid = false;
             return;

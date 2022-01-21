@@ -1,8 +1,11 @@
 import { get } from "svelte/store";
-import { backendUrl } from "../store";
+import { backendUrl, user } from "../store";
 
 export class HttpService {
-    public static async run(method, headers, body, route) {
+    public static async run(method: string, headers: Headers, body, route: string, isAuth: boolean = false) {
+        if(isAuth) {
+            headers.append("Authorization", `Bearer ${get(user)['token']}`);
+        }
         var requestOptions: RequestInit = {
             method: method,
             headers: headers,
