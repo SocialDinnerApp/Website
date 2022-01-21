@@ -8,8 +8,8 @@
 
     export let eventname: string = "";
     export let eventloc: string = "";
-    export let eventzipcode: number = undefined;
-    export let partfee: number = undefined;
+    export let eventzipcode: number = null;
+    export let partfee: number = null;
 
     function validateInput() {
         if (eventname === "") {
@@ -20,11 +20,11 @@
             isFormValid = false;
             return;
         }
-        if (eventzipcode === undefined) {
+        if (eventzipcode === null) {
             isFormValid = false;
             return;
         }
-        if (partfee === undefined) {
+        if (partfee === null) {
             isFormValid = false;
             return;
         }

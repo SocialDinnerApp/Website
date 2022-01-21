@@ -1,46 +1,47 @@
 <script lang="ts">
     import NavigationBar from "../NavigationBar/navigationbar.svelte";
     import Item from "./components/Item.svelte";
-    import { push } from "svelte-spa-router";
+    import { push, replace } from "svelte-spa-router";
     import Icon from "@iconify/svelte";
-    import { fade } from "svelte/transition"
+    import { fade } from "svelte/transition";
+    import { onMount } from "svelte";
+    import { EventService } from "../../services/Event";
 
     var searchpattern: string = "";
     var isOldEvents: boolean = false;
+    let events: Array<any> = [];
 
-    let info = [
-        {
-            id: 1,
-            name: "Dinner Uni Heidelberg",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.",
-            ort: "Mannheim",
-            zeit: "31.12.2021",
-            kosten: 7,
-            image: "dhbw.jpg",
-        },
-        {
-            id: 2,
-            name: "Dinner Frankfurt Studies",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.",
-            ort: "Mannheim",
-            zeit: "31.12.2021",
-            kosten: 7,
-            image: "dhbw.jpg",
-        },
-        {
-            id: 3,
-            name: "Dinner Hochschule BW MA",
-            text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. consequuntur vel vitae commodi alias voluptatem est voluptatum ipsa quae.",
-            ort: "Mannheim",
-            zeit: "31.12.2021",
-            kosten: 7,
-            image: "dhbw.jpg",
-        },
-    ];
+    onMount(async () => {
+        const response = await EventService.getAll();
+        console.log(response);
+        if (response) {
+            events = response as Array<any>;
+        }
+    });
 
     function onClickTile() {
         push("#/myevents/123");
     }
+
+    function getDateFromString(datestring: string) {
+        let day = datestring.split(".")[0];
+        let month = datestring.split(".")[1];
+        let year = datestring.split(".")[2];
+        let date = new Date(`${year}-${month}-${day}`);
+        return date
+    }
+
+    $: checkFilter = (event) => {
+        if (!isOldEvents) {
+            const eventdate = getDateFromString(event.date)
+            const now = new Date()
+            if (now > eventdate) {
+                console.log(`Old event: ${event.name}`)
+                return false
+            }
+        }
+        return event.name.toLowerCase().includes(searchpattern.toLowerCase());
+    };
 </script>
 
 <NavigationBar route="/myevents" />
@@ -59,7 +60,7 @@
             </p>
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container my-5 border-bottom pb-5">
         <div
             class="row border border-secondary me-5 py-2 shadow"
             style="border-radius: 50px;"
@@ -83,7 +84,7 @@
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckChecked"
-                checked={isOldEvents}
+                on:click={() => isOldEvents = !isOldEvents} 
                 style="width: 40px; height: 20px;"
             />
             <label class="form-check-label ms-2" for="flexSwitchCheckChecked"
@@ -91,13 +92,24 @@
             >
         </div>
     </div>
-    {#each info as i (i.id)}
+    {#each events as event}
+        {#if checkFilter(event)}
+            <div
+                on:click={onClickTile}
+                in:fade={{ delay: 0, duration: 500 }}
+                out:fade={{ delay: 0, duration: 0 }}
+            >
+                <Item item={event} />
+            </div>
+        {/if}
+    {/each}
+    <!-- {#each info as i (i.id)}
         {#if i.name.toLowerCase().includes(searchpattern.toLowerCase())}
             <div on:click={onClickTile} in:fade="{{ delay: 0, duration: 500 }}" out:fade="{{ delay: 0, duration: 0 }}">
                 <Item item={i}/>
             </div>
         {/if}
-    {/each}
+    {/each} -->
 </div>
 
 <style>

@@ -22,4 +22,10 @@ export class EventService {
         const response = await HttpService.run('POST', header, body, route, true);
         return response;
     }
+
+    public static async getAll() {
+        var header = new Headers();
+        const response = await HttpService.run('GET', header, undefined, '/allevents', true)
+        return response
+    }
 }

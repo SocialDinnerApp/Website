@@ -5,7 +5,7 @@
     let maxDate = new Date(`${regdeadline.getFullYear() + 2}-01-01 00:00:00`);
 
     export let isFormValid: boolean = false;
-    export let maxpart: number = undefined;
+    export let maxpart: number = null;
     export let availdomains: string = "";
 
     function validateInput() {
@@ -13,7 +13,7 @@
             isFormValid = false;
             return;
         }
-        if (maxpart === undefined) {
+        if (maxpart === null) {
             isFormValid = false;
             return;
         }

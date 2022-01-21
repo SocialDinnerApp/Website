@@ -46,11 +46,19 @@
             isFormFourValid;
     }
 
+    function getDateAsString(date: Date) {
+        let year = date.getFullYear();
+        let month = String(date.getMonth() + 1).padStart(2, "0");
+        let day = String(date.getDay()).padStart(2, "0");
+
+        return `${day}.${month}.${year}`;
+    }
+
     async function onCreateEvent() {
         const result = await EventService.create(
             eventname,
             eventdesc,
-            eventdate,
+            getDateAsString(eventdate),
             timeStarter,
             timeMain,
             timeDessert,
@@ -58,13 +66,13 @@
             eventzipcode,
             partfee,
             maxpart,
-            regdeadline
+            getDateAsString(regdeadline)
         );
         console.log(result);
         if (result) {
-            document.getElementById('openEventCreateConfirm').click()
+            document.getElementById("openEventCreateConfirm").click();
         } else {
-            document.getElementById('openEventCreateFailed').click()
+            document.getElementById("openEventCreateFailed").click();
         }
     }
 </script>
@@ -170,8 +178,16 @@
         {/if}
     </div>
 </div>
-<div id="openEventCreateConfirm" data-bs-toggle="modal" data-bs-target="#EventCreateConfirm"/>
-<div id="openEventCreateFailed" data-bs-toggle="modal" data-bs-target="#EventCreateFailed"/>
+<div
+    id="openEventCreateConfirm"
+    data-bs-toggle="modal"
+    data-bs-target="#EventCreateConfirm"
+/>
+<div
+    id="openEventCreateFailed"
+    data-bs-toggle="modal"
+    data-bs-target="#EventCreateFailed"
+/>
 <ModalBox
     modalId="EventCreateConfirm"
     headertext="Bestätigung"
