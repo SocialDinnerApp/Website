@@ -19,8 +19,8 @@
       <div class="item">
         <Icon icon="bx:bx-calendar" color="A785B9" width="30px" />
       </div>
-      <div class="card-body">
-        <p class="card-text text-light">{item.ort}</p>
+      <div class="card-body ">
+        <p class="card-text text-light  ">{item.ort}</p>
       </div>
     </div>
   </div>
@@ -29,8 +29,9 @@
       <div class="item">
         <Icon icon="oi:euro" color="A785B9" width="25px" />
       </div>
+      
       <div class="card-body">
-        <p class="card-text text-light">{item.kosten}</p>
+        <p class="card-text text-light justify-content-center" >{item.kosten}</p>
       </div>
     </div>
   </div>
@@ -46,7 +47,12 @@
     border-radius: 15px;
     padding: 8px 0px;
     margin: 0px 0px;
-    position: relative;
+    position:relative;
     text-align: center;
+  }
+  .card-body{
+  height: 55px;
+  text-align:baseline;
+
   }
 </style>

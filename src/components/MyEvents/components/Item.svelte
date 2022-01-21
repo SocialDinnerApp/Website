@@ -5,7 +5,7 @@
 
 <!-- Erstellen der karte-->
 <div class="col d-flex justify-content-center">
-  <div class="card ">
+  <div class="card">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="images/dhbw.jpg" class="img-fluid rounded" />
@@ -19,10 +19,11 @@
               <h5 class="card-title">{item.name}</h5>
               <p class="card-text">{item.text}</p>
               <InnerTiles bind:item />
-              <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-              </p>
+              
             </div>
+            <p class="card-text p-2 flex-fill bd-highlight" >
+              <small class="text-muted ">Last updated 3 mins ago</small>
+            </p>
           </div>
         </div>
       </div>
@@ -36,6 +37,7 @@
     color: #333;
     border-radius: 15px;
     max-width: 1090px;
+    height: auto;
     margin: 30px 20px;
     position: center;
   }
@@ -43,7 +45,7 @@
     float: right;
     display: block;
     width: auto;
-    max-height: 280px;
+    max-height: 320px;
     margin-top: 0px;
     margin-bottom: 0px;
   }
