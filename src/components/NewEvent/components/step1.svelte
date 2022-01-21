@@ -8,7 +8,8 @@
 
     export let eventname: string = "";
     export let eventloc: string = "";
-    export let partfee: number = 0;
+    export let eventzipcode: number = undefined;
+    export let partfee: number = undefined;
 
     function validateInput() {
         if (eventname === "") {
@@ -19,7 +20,11 @@
             isFormValid = false;
             return;
         }
-        if (partfee === 0) {
+        if (eventzipcode === undefined) {
+            isFormValid = false;
+            return;
+        }
+        if (partfee === undefined) {
             isFormValid = false;
             return;
         }
@@ -52,6 +57,16 @@
                                 id="eventLocation"
                                 placeholder="Eventstadt"
                                 bind:value={eventloc}
+                                on:input={validateInput}
+                            />
+                        </div>
+                        <div class="my-4">
+                            <input
+                                type="number"
+                                class="form-control border border-secondary"
+                                id="eventZipcode"
+                                placeholder="Event Postleitzahl"
+                                bind:value={eventzipcode}
                                 on:input={validateInput}
                             />
                         </div>

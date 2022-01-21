@@ -1,11 +1,12 @@
 <script lang="ts">
     import NavigationBar from "../NavigationBar/navigationbar.svelte";
-    import Confirmation from "./components/Confirmation.svelte";
+    import ModalBox from "./components/ModalBox.svelte";
     import StepOne from "./components/step1.svelte";
     import StepTwo from "./components/step2.svelte";
     import StepThree from "./components/step3.svelte";
     import StepFour from "./components/step4.svelte";
     import { fade } from "svelte/transition";
+    import { EventService } from "../../services/Event";
 
     var curStep = 1;
     let isFormValid: boolean;
@@ -21,6 +22,7 @@
     let eventdate: Date;
     let eventname: string;
     let eventloc: string;
+    let eventzipcode: number;
     let partfee: number;
     let eventdesc: string;
     let maxpart: number;
@@ -30,7 +32,6 @@
     let timeMain: string;
     let timeDessert: string;
 
-
     $: if (curStep == 1) {
         isFormValid = isFormOneValid;
     } else if (curStep == 2) {
@@ -38,12 +39,33 @@
     } else if (curStep == 3) {
         isFormValid = isFormOneValid && isFormTwoValid && isFormThreeValid;
     } else if (curStep == 4) {
-        isFormValid = (
+        isFormValid =
             isFormOneValid &&
             isFormTwoValid &&
             isFormThreeValid &&
-            isFormFourValid
+            isFormFourValid;
+    }
+
+    async function onCreateEvent() {
+        const result = await EventService.create(
+            eventname,
+            eventdesc,
+            eventdate,
+            timeStarter,
+            timeMain,
+            timeDessert,
+            eventloc,
+            eventzipcode,
+            partfee,
+            maxpart,
+            regdeadline
         );
+        console.log(result);
+        if (result) {
+            document.getElementById('openEventCreateConfirm').click()
+        } else {
+            document.getElementById('openEventCreateFailed').click()
+        }
     }
 </script>
 
@@ -77,6 +99,7 @@
                 bind:isFormValid={isFormOneValid}
                 bind:eventname
                 bind:eventloc
+                bind:eventzipcode
                 bind:partfee
                 bind:eventdate
             />
@@ -93,14 +116,24 @@
             in:fade={{ delay: 0, duration: 500 }}
             out:fade={{ delay: 0, duration: 0 }}
         >
-            <StepThree bind:isFormValid={isFormThreeValid} bind:availdomains bind:maxpart bind:regdeadline/>
+            <StepThree
+                bind:isFormValid={isFormThreeValid}
+                bind:availdomains
+                bind:maxpart
+                bind:regdeadline
+            />
         </div>
     {:else if curStep == 4}
         <div
             in:fade={{ delay: 0, duration: 500 }}
             out:fade={{ delay: 0, duration: 0 }}
         >
-            <StepFour bind:isFormValid={isFormFourValid} bind:timeDessert bind:timeMain bind:timeStarter/>
+            <StepFour
+                bind:isFormValid={isFormFourValid}
+                bind:timeDessert
+                bind:timeMain
+                bind:timeStarter
+            />
         </div>
     {/if}
 
@@ -120,9 +153,8 @@
             <button
                 type="button"
                 class="btn btn-primary py-2 px-3"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
                 disabled={!isFormValid}
+                on:click={onCreateEvent}
             >
                 Event erstellen
             </button>
@@ -138,4 +170,17 @@
         {/if}
     </div>
 </div>
-<Confirmation />
+<div id="openEventCreateConfirm" data-bs-toggle="modal" data-bs-target="#EventCreateConfirm"/>
+<div id="openEventCreateFailed" data-bs-toggle="modal" data-bs-target="#EventCreateFailed"/>
+<ModalBox
+    modalId="EventCreateConfirm"
+    headertext="Bestätigung"
+    bodytext={`Die Erstellung des Events ${eventname} war erfolgreich!`}
+    okRoute="#/myevents"
+/>
+<ModalBox
+    modalId="EventCreateFailed"
+    headertext="Fehler"
+    bodytext={`Die Erstellung des Events ${eventname} ist fehlgeschlagen. Bitte versuchen sie es erneut!`}
+    okRoute="#/myevents"
+/>
