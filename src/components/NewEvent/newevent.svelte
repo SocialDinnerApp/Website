@@ -7,9 +7,44 @@
     import StepFour from "./components/step4.svelte";
     import { fade } from "svelte/transition";
 
-    var curStep = 3;
+    var curStep = 1;
+    let isFormValid: boolean;
+    let isFormOneValid: boolean;
+    let isFormTwoValid: boolean;
+    let isFormThreeValid: boolean;
+    let isFormFourValid: boolean;
+
     const totalSteps = 4;
     $: progress = (curStep / totalSteps) * 100;
+
+    // FormVariables
+    let eventdate: Date;
+    let eventname: string;
+    let eventloc: string;
+    let partfee: number;
+    let eventdesc: string;
+    let maxpart: number;
+    let availdomains: string;
+    let regdeadline: Date;
+    let timeStarter: string;
+    let timeMain: string;
+    let timeDessert: string;
+
+
+    $: if (curStep == 1) {
+        isFormValid = isFormOneValid;
+    } else if (curStep == 2) {
+        isFormValid = isFormOneValid && isFormTwoValid;
+    } else if (curStep == 3) {
+        isFormValid = isFormOneValid && isFormTwoValid && isFormThreeValid;
+    } else if (curStep == 4) {
+        isFormValid = (
+            isFormOneValid &&
+            isFormTwoValid &&
+            isFormThreeValid &&
+            isFormFourValid
+        );
+    }
 </script>
 
 <NavigationBar route="/newevent" />
@@ -34,20 +69,38 @@
         </div>
     </div>
     {#if curStep == 1}
-        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
-            <StepOne />
+        <div
+            in:fade={{ delay: 0, duration: 500 }}
+            out:fade={{ delay: 0, duration: 0 }}
+        >
+            <StepOne
+                bind:isFormValid={isFormOneValid}
+                bind:eventname
+                bind:eventloc
+                bind:partfee
+                bind:eventdate
+            />
         </div>
     {:else if curStep == 2}
-        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
-            <StepTwo />
+        <div
+            in:fade={{ delay: 0, duration: 500 }}
+            out:fade={{ delay: 0, duration: 0 }}
+        >
+            <StepTwo bind:isFormValid={isFormTwoValid} bind:eventdesc />
         </div>
     {:else if curStep == 3}
-        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
-            <StepThree />
+        <div
+            in:fade={{ delay: 0, duration: 500 }}
+            out:fade={{ delay: 0, duration: 0 }}
+        >
+            <StepThree bind:isFormValid={isFormThreeValid} bind:availdomains bind:maxpart bind:regdeadline/>
         </div>
     {:else if curStep == 4}
-        <div in:fade={{ delay: 0, duration: 500 }} out:fade={{ delay: 0, duration: 0 }}>
-            <StepFour />
+        <div
+            in:fade={{ delay: 0, duration: 500 }}
+            out:fade={{ delay: 0, duration: 0 }}
+        >
+            <StepFour bind:isFormValid={isFormFourValid} bind:timeDessert bind:timeMain bind:timeStarter/>
         </div>
     {/if}
 
@@ -69,6 +122,7 @@
                 class="btn btn-primary py-2 px-3"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
+                disabled={!isFormValid}
             >
                 Event erstellen
             </button>
@@ -77,6 +131,7 @@
                 type="button"
                 class="btn btn-primary py-2 px-3"
                 on:click={() => (curStep += 1)}
+                disabled={!isFormValid}
             >
                 Weiter
             </button>

@@ -1,9 +1,31 @@
 <script lang="ts">
     import { DateInput } from "date-picker-svelte";
-    let date = new Date()
-    let minDate = new Date(`${date.getFullYear()}-01-01 00:00:00`)
-    let maxDate = new Date(`${date.getFullYear() + 2}-01-01 00:00:00`)
+    export let eventdate = new Date();
+    let minDate = new Date(`${eventdate.getFullYear()}-01-01 00:00:00`);
+    let maxDate = new Date(`${eventdate.getFullYear() + 2}-01-01 00:00:00`);
 
+    export let isFormValid: boolean = false;
+
+    export let eventname: string = "";
+    export let eventloc: string = "";
+    export let partfee: number = 0;
+
+    function validateInput() {
+        if (eventname === "") {
+            isFormValid = false;
+            return;
+        }
+        if (eventloc === "") {
+            isFormValid = false;
+            return;
+        }
+        if (partfee === 0) {
+            isFormValid = false;
+            return;
+        }
+        isFormValid = true;
+        return;
+    }
 </script>
 
 <div class="d-flex justify-content-center mt-5">
@@ -19,6 +41,8 @@
                                 class="form-control border border-secondary"
                                 id="eventName"
                                 placeholder="Eventname"
+                                bind:value={eventname}
+                                on:input={validateInput}
                             />
                         </div>
                         <div class="my-4">
@@ -27,27 +51,28 @@
                                 class="form-control border border-secondary"
                                 id="eventLocation"
                                 placeholder="Eventstadt"
+                                bind:value={eventloc}
+                                on:input={validateInput}
                             />
                         </div>
-                        <!-- <div class="my-4">
-                            <input
-                                type="text"
-                                class="ctm-form-control"
-                                id="eventDate"
-                                placeholder="Eventdatum"
-                            />
-                        </div> -->
                         <div class="my-4">
                             <input
-                                type="text"
+                                type="number"
                                 class="form-control border border-secondary"
                                 id="eventFee"
                                 placeholder="Teilnahmegebühr"
+                                bind:value={partfee}
+                                on:input={validateInput}
                             />
                         </div>
                         <div class="mx-1">
                             <p class="text-secondary">Eventdatum</p>
-                            <DateInput bind:value={date} format="dd.MM.yyyy" min={minDate} max={maxDate}/>
+                            <DateInput
+                                bind:value={eventdate}
+                                format="dd.MM.yyyy"
+                                min={minDate}
+                                max={maxDate}
+                            />
                         </div>
                     </div>
                 </div>

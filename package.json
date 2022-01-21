@@ -31,6 +31,7 @@
     "date-picker-svelte": "^1.3.0",
     "sirv-cli": "^1.0.0",
     "svelte-frappe-charts": "^1.9.1",
-    "svelte-spa-router": "^3.2.0"
+    "svelte-spa-router": "^3.2.0",
+    "svelte-time-picker": "^1.0.8"
   }
 }
