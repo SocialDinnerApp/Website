@@ -8,7 +8,7 @@
   <div class="card">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="images/dhbw.jpg" class="img-fluid rounded" />
+        <img src="images/dhbw.jpg" class="img-fluid" />
       </div>
 
       <div class="col-md-8">
@@ -42,11 +42,13 @@
     position: center;
   }
   img {
-    float: right;
+    float:center;
     display: block;
-    width: auto;
+    width: 370px;
     max-height: 320px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+  
+   
+  
+    border-radius: 15px 0px 0px 15px;
   }
 </style>

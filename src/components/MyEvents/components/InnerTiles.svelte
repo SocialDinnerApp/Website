@@ -17,7 +17,7 @@
   <div class="col-sm-4">
     <div class="card">
       <div class="item">
-        <Icon icon="bx:bx-calendar" color="A785B9" width="30px" />
+        <Icon icon="bx:bx-calendar"  color="A785B9" width="30px" />
       </div>
       <div class="card-body ">
         <p class="card-text text-light  ">{item.ort}</p>
@@ -31,7 +31,7 @@
       </div>
       
       <div class="card-body">
-        <p class="card-text text-light justify-content-center" >{item.kosten}</p>
+        <p class="card-text text-light justify-content-center" style="position: relative; top:4px;">{item.kosten}</p>
       </div>
     </div>
   </div>
@@ -53,6 +53,8 @@
   .card-body{
   height: 55px;
   text-align:baseline;
+  position: relative;
+  top: 10px;
 
   }
 </style>
