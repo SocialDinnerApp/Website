@@ -17,7 +17,7 @@
     </div>
 
     <div class="container">
-        <div class="main-body">
+        <div class="main-body ">
             <div class="row">
                 <div
                     class="d-flex justify-content-center "
@@ -26,15 +26,17 @@
                     <ProfilePictureCard />
                 </div>
             </div>
-            <div class="row gutters-sm">
-                <div class="col-lg-8">
-                    <div class="card user-card-full ">
-                        <div class="card-body p-4">
-                            <div class="row">
-                                <div class="col-md-1 " />
+            <div class="row " style="max-width: 1500px;">
+                
+                <div class=" col-lg-12 d-flex justify-content-center ">
+                <div class="col-lg-10" style="max-width: 1500px;">
+                    <div class="card user-card-full " style="max-width: 1500px;">
+                        <div class="card-body p-4" style="pointer-events: center; max-width: 1500px;">
+                            <div class="d-flex justify-content-center" style="max-width: 1500px;">
 
 
-                                <div class="col-md-12 d-flex justify-content-center" style="max-width: 900px;">
+
+                                <div class="col-md-12 d-flex justify-content-center" style="max-width: 1000px;">
                                     <div class="card-block">
                                         <h6
                                             class="m-b-20 p-b-5 b-b-default f-w-600"
@@ -116,8 +118,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-1 " />
+                                </div></div>
+                          
 
                             </div>
                         </div>

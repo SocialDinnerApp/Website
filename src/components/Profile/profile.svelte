@@ -33,13 +33,13 @@
             <div class="row gutters-sm">
                 <div class="col-md-1 " />
 
-                <div class="col-md-10 ">
-                    <div class="align-items-center">
-                        <div class="card mb-3 " style="max-width: 900px;">
+                <div class="col-md-10  ">
+                  
+                        <div class="card mb-3 " style="max-width: 1500px;">
                             {#each info as info (info.id)}
                                 <DataCard {info} />
                             {/each}
-                        </div>
+                   
                     </div>
                 </div>
                 <div class="col-md-1 " />

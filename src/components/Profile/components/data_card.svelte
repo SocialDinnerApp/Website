@@ -4,8 +4,8 @@
     console.log(info);
 </script>
 
-<div class="card user-card-full ">
-    <div class="card-body p-4">
+<div class="card">
+    <div class="card-body p-4" style="max-width: 1500px;">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card-block">
