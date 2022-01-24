@@ -1,12 +1,13 @@
 <script>
     import {push} from 'svelte-spa-router'
+    import { fade } from "svelte/transition"
 </script>
 
 <div
     class="row justify-content-center align-items-center"
     style="padding: 30px 0;"
 >
-    <div class="col-lg-5">
+    <div class="col-lg-5" in:fade="{{ delay: 200, duration: 1000 }}" out:fade="{{ delay: 0, duration: 0}}">
         <div class="d-flex justify-content-center w-50">
             <img
                 src="images/landingpage_2.png"
@@ -15,7 +16,7 @@
             />
         </div>
     </div>
-    <div class="col-lg-5 text-left">
+    <div class="col-lg-5 text-left" in:fade="{{ delay: 200, duration: 1000 }}" out:fade="{{ delay: 0, duration: 0}}">
         <h3 class="text-secondary">Erstelle dein Event als Universität.</h3>
         <p class="text-light">
             Einfach mit wenigen Klicken ein Event für eure Studenten erstellen.

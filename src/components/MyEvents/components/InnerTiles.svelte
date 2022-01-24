@@ -10,7 +10,7 @@
       <div class="card"  >
         <div class="item"> <Icon icon="bytesize:location" color='A785B9' width= 30px/> </div>
         <div class="card-body">
-          <p class="card-text">{item.zeit}</p>
+          <p class="card-text">{item.date}</p>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
       <div class="card"  >
         <div class="item"> <Icon icon="bx:bx-calendar" color='A785B9' width= 30px/> </div>
         <div class="card-body">
-          <p class="card-text">{item.ort}</p>
+          <p class="card-text">{item.city}</p>
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
       <div class="card" style="width: 8rem;" >
         <div class="item"> <Icon icon="oi:euro" color='A785B9' width= 25px /> </div>
         <div class="card-body">
-          <p class="card-text">{item.kosten}</p>
+          <p class="card-text">{item.fee}</p>
         </div>
       </div>
     </div>

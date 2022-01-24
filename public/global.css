@@ -1,3 +1,28 @@
 * {
     font-family: 'Quicksand', sans-serif;
 }
+.ctm-form-control {
+    display: block;
+    width: 100%;
+    padding: 0.3rem 0.2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: none;
+    border-bottom: 1px solid #A785B9;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+:root {
+    --date-picker-foreground: rgb(117, 117, 117);
+    --date-picker-background: #fff;
+    --date-picker-highlight-border: #a785b9;
+    --date-picker-highlight-shadow: #a785b9;
+    --date-picker-selected-color: #fff;
+    --date-picker-selected-background: #a785b9;
+}
