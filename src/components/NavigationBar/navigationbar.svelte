@@ -1,5 +1,9 @@
-<script>
+<script lang="ts">
     export let route = "/mystatistics";
+
+    function onSignout() {
+        localStorage.removeItem('userCred');
+    }
 </script>
 
 <nav
@@ -34,7 +38,10 @@
                 <a class="nav-link {route == "/newevent" ? "text-primary": "text-light"}" href="#/newevent">Neues Event</a>
             </div>
             <div class="navbar-nav">
-                <a class="nav-link text-light" href="#/">Abmelden</a>
+                <a class="nav-link {route == "/profile" ? "text-primary": "text-light"}" href="#/profile">Profile</a>
+            </div>
+            <div class="navbar-nav">
+                <a class="nav-link text-light" href="#/" on:click={onSignout}>Abmelden</a>
             </div>
         </div>
     </div>
