@@ -38,6 +38,9 @@
                 <a class="nav-link {route == "/newevent" ? "text-primary": "text-light"}" href="#/newevent">Neues Event</a>
             </div>
             <div class="navbar-nav">
+                <a class="nav-link {route == "/profile" ? "text-primary": "text-light"}" href="#/profile">Profile</a>
+            </div>
+            <div class="navbar-nav">
                 <a class="nav-link text-light" href="#/" on:click={onSignout}>Abmelden</a>
             </div>
         </div>
