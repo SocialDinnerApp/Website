@@ -2,12 +2,42 @@
     import { pop } from "svelte-spa-router";
     import { info } from "./info";
     import ProfilePictureCard from "./profile_picture_card.svelte";
+    import { UserService } from "../../../services/User";
+import { loop_guard } from "svelte/internal";
     console.log(info[0]);
     const i = info[0];
+    var username: string = "hallo";
+    var email: string = "";
+    var password: string = "";
+    var faculty: string = "";
+    var city: string = "";
+    var university: string = "";
+
+    console.log(username)
+    async function update() {
+        const result = await UserService.update(
+            username,
+            email,
+            faculty,
+            city,
+            university,
+            password
+        );
+        ;
+        if (result) {
+            console.log(result)
+        } else {
+            console.log("Geht nicht");
+        }
+    }
+
+
+
+
 </script>
 
 <div
-    class="g-5 justify-content-evenly m-5 p-5 border border-secondary rounded shadow"
+    class="g-5 justify-content-evenly m-5 p-5 border border-secondary rounded shadow" 
 >
     <div
         class="d-flex border-light border-bottom border-1 justify-content-between"
@@ -16,8 +46,8 @@
         <p class="text-secondary" on:click={() => pop()}>zurück</p>
     </div>
 
-    <div class="container">
-        <div class="main-body ">
+    <div class="container" >
+        <div class="main-body " >
             <div class="row">
                 <div
                     class="d-flex justify-content-center "
@@ -31,8 +61,8 @@
                 <div class=" col-lg-12 d-flex justify-content-center ">
                 <div class="col-lg-10" style="max-width: 1500px;">
                     <div class="card user-card-full " style="max-width: 1500px;">
-                        <div class="card-body p-4" style="pointer-events: center; max-width: 1500px;">
-                            <div class="d-flex justify-content-center" style="max-width: 1500px;">
+                        <div class="card-body p-4" style="pointer-events: center; max-width: 1500px;" >
+                            <div class="d-flex justify-content-center" style="max-width: 1500px;" >
 
 
 
@@ -51,8 +81,12 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.Username}
+                                                    id="username"
+                                                    bind:value={username}
                                                 />
+                                            
+                                         
+                                                
                                             </div>
                                             <div class="col-sm-4">
                                                 <p class="m-b-10 f-w-600">
@@ -62,7 +96,8 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.password}
+                                                    id="password"
+                                                    bind:value={password}
                                                 />
                                             </div>
                                             <div class="col-sm-4">
@@ -73,7 +108,7 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.Email}
+                                                    bind:value={email}
                                                 />
                                             </div>
                                         </div>
@@ -91,7 +126,7 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.Universität}
+                                                    bind:value={faculty}
                                                 />
                                             </div>
                                             <div class="col-sm-4">
@@ -102,7 +137,7 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.City}
+                                                    bind:value={city}
                                                 />
                                             </div>
                                             <div class="col-sm-4">
@@ -113,7 +148,7 @@
                                                 <input
                                                     type="text-muted"
                                                     class="form-control"
-                                                    value={i.faculty}
+                                                    bind:value={faculty}
                                                 />
                                             </div>
                                         </div>
@@ -130,8 +165,8 @@
         <div class="row">
             <div class="col-sm-12 d-flex justify-content-center">
                 <button
-                    on:click={() => pop()}
-                    type="button"
+                    on:click={() => update()}
+                    type="buttonupedate"
                     class="btn btn-primary py-2 px-3 "
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModa"

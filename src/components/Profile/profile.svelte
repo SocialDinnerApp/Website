@@ -4,12 +4,16 @@
     import DataCard from "./components/data_card.svelte";
     import { info } from "./components/info";
     import { push } from "svelte-spa-router";
-
+   
     function onClickTile() {
         push("#/profile/edit");
         // console.log('Ja')
     }
+    let user: Array<any> = [];
+    
+
 </script>
+
 
 <NavigationBar route="/profile" />
 
@@ -17,7 +21,7 @@
     class="g-5 justify-content-evenly m-5 p-5 border border-secondary rounded shadow"
 >
     <div class="border-light border-bottom border-1">
-        <h1 class="text-primary">Profile</h1>
+        <h1 class="text-primary">Profile  </h1>
     </div>
     <div class="container">
         <div class="main-body">
