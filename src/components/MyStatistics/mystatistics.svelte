@@ -11,10 +11,12 @@
 
     onMount(async () => {
         // ToBe exchanged
-        // monthlyRev = await StatService.getMonthlyRev();
-        monthlyRev = 5
+        const monthlyRev_res = await StatService.getMonthlyRev();
+        if (monthlyRev_res) {
+            monthlyRev = monthlyRev_res['data'][0]['revenue']
+        }
+
         lastSeven = await StatService.getLastSeven();
-        console.log(lastSeven)
 
         var bar_dates = lastSeven['data'].map((event) => event["name"]);
         var bar_values = lastSeven['data'].map((event) => event["value"]);
