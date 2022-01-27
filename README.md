@@ -19,6 +19,9 @@
     - Insights page (offers possibility to gain insights into released events via multiple charts)
     - MyEvents page (offers possibility to see all events and filter for them)
     - MyEvents Details page (offers possibility to see descriptive details and insights via charts of a specific event)
+    - Profilepage (where user can see his personal information) 
+    - Profilepage_edit (which updates the information of the user in the backend) 
+    - EventCard (Clean way to show the user the key information) 
     - Responsive Navigation bar
 - Dived into and worked a lot with the following svelte features
     - svelte store (to have a proper State-Management for storing centralised variables)
@@ -53,13 +56,15 @@
 - Implementation of a wizard, which allows an organizer to create new events
 - Implementation of dedicated date and time picker for a better user experience
 - Implementation of a possibility for the organizer, to draw a rectangle of possible geographical participations on Google Maps
+- Implementation of reusable code/ elements  
+- problematical/ analytical problem solving 
 
 **Learnings**
 
 - Got to know Svelte as a framework including its features
 - Working with deno as runtime environment
-- Improved typescript skills
-- Improved HTML and CSS knowledge
+- Improved/Learn typescript skills
+- Improved/Learn HTML and CSS knowledge
 - Increased Bootstrap knowledge
 - How to use local storage to persist data in the browser
 - How to integrate Google Maps and allow the user to draw a rectangle on the Map (different project)
