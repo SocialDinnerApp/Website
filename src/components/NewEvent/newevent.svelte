@@ -5,17 +5,18 @@
     import StepTwo from "./components/step2.svelte";
     import StepThree from "./components/step3.svelte";
     import StepFour from "./components/step4.svelte";
+    import StepFive from "./components/step5.svelte";
     import { fade } from "svelte/transition";
     import { EventService } from "../../services/Event";
 
-    var curStep = 1;
+    var curStep = 5;
     let isFormValid: boolean;
     let isFormOneValid: boolean;
     let isFormTwoValid: boolean;
     let isFormThreeValid: boolean;
     let isFormFourValid: boolean;
 
-    const totalSteps = 4;
+    const totalSteps = 5;
     $: progress = (curStep / totalSteps) * 100;
 
     // FormVariables
@@ -44,6 +45,8 @@
             isFormTwoValid &&
             isFormThreeValid &&
             isFormFourValid;
+    } else if (curStep == 5) {
+        isFormValid = true;
     }
 
     function getDateAsString(date: Date) {
@@ -142,6 +145,13 @@
                 bind:timeMain
                 bind:timeStarter
             />
+        </div>
+    {:else if curStep == 5}
+        <div
+            in:fade={{ delay: 0, duration: 500 }}
+            out:fade={{ delay: 0, duration: 0 }}
+        >
+            <StepFive />
         </div>
     {/if}
 

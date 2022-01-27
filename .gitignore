@@ -3,3 +3,5 @@
 /public/vendor/
 
 .DS_Store
+
+keys.ts

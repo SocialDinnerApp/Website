@@ -12,13 +12,17 @@
         />
     </div>
     <div class="col-lg-6" in:fade="{{ delay: 400, duration: 1000 }}" out:fade="{{ delay: 0, duration: 0}}">
-        <h3 class="text-secondary">Wie funktioniert das?</h3>
+        <h3 class="text-secondary">Weshalb solltest Du daran teilnehmen?</h3>
         <p class="text-light" style="margin-top: 15px">
-            Das Social Dinner Event ist eine Möglichkeit als Student mit wenigen
-            Schritten viele Kommilitonen kennenzulernen. Ob ihr ein gutes Essen
-            genießen oder neue Leute kennenlernen wollt, hier seid ihr richtig.
-            Wir wissen, dass es immer schwierig ist neue Leute kennenzulernen,
-            deshalb sind wir da, um diese Hürde zu umgehen.
+            In Deutschland gibt es viele Studenten, welche in den meisten Fällen
+            für das Studium in eine völlig neue Stadt gezogen sind und dort kaum
+            Leute kennen. Dieses Problem lösen wir durch eine App, worüber
+            ausschließlich Studenten an einem sogenannten “Running Dinner”-Event
+            teilnehmen können. Dabei bekommen 2er-Teams entweder Vor-, Haupt-
+            oder Nachspeise zugelost, wobei sie zwei andere Teams bei sich zuhause
+            bekochen. Bei den verbleibenden zwei Speisen werden sie von fremden
+            Teams bekocht. Dafür kannst Du einfach ein passendes Event in der
+            App aussuchen und zur Teilnahme das Anmeldeformular ausfüllen.
         </p>
     </div>
 </div>

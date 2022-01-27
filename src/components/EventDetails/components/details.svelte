@@ -1,11 +1,23 @@
 <script lang="ts">
     import { pop } from "svelte-spa-router";
+
+    // Eventvariables
+    export let city: string
+    export let date: string
+    export let description: string
+    export let fee: number
+    export let maxpart: number
+    export let name: string
+    export let regdeadline: string
+    export let timedessert: string
+    export let timemain: string
+    export let timestarter: string
 </script>
 <div
     class="row g-5 justify-content-left mx-5 mt-0 mb-5 px-3 pb-5 border border-top-0 border-secondary shadow"
 >
     <div class="d-flex border-light border-bottom border-1 justify-content-between">
-        <h1 class="text-primary">Dinner Hochschule BW MA</h1>
+        <h1 class="text-primary">{name}</h1>
         <p class="text-secondary" on:click={() => pop()}>zurück</p>
     </div>
     <div class="row px-5 g-4">
@@ -27,13 +39,7 @@
                 <h5 class="text-light">Beschreibung</h5>
             </div>
             <p>
-                Hi! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor.
+                {description}
             </p>
         </div>
         <div>
@@ -45,7 +51,7 @@
                     <p>Vorspeise:</p>
                 </div>
                 <div class="col-auto">
-                    <p>17:00 Uhr</p>
+                    <p>{timestarter} Uhr</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -53,7 +59,7 @@
                     <p>Hauptspeise:</p>
                 </div>
                 <div class="col-auto">
-                    <p>18:30 Uhr</p>
+                    <p>{timemain} Uhr</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -61,7 +67,7 @@
                     <p>Nachspeise:</p>
                 </div>
                 <div class="col-auto">
-                    <p>20:00 Uhr</p>
+                    <p>{timedessert} Uhr</p>
                 </div>
             </div>
         </div>
@@ -75,7 +81,7 @@
                     <p>Ort:</p>
                 </div>
                 <div class="col-auto">
-                    <p>Mannheim</p>
+                    <p>{city}</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -83,7 +89,7 @@
                     <p>Datum:</p>
                 </div>
                 <div class="col-auto">
-                    <p>31.12.2022</p>
+                    <p>{date}</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -91,7 +97,7 @@
                     <p>Teilnahmegebühr:</p>
                 </div>
                 <div class="col-auto">
-                    <p>6€</p>
+                    <p>{fee}€</p>
                 </div>
             </div>
         </div>
@@ -105,7 +111,7 @@
                     <p>Maximale Teilnehmeranzahl:</p>
                 </div>
                 <div class="col-auto">
-                    <p>150</p>
+                    <p>{maxpart}</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -113,7 +119,7 @@
                     <p>Anmeldeschluss:</p>
                 </div>
                 <div class="col-auto">
-                    <p>14.12.2022 17:00</p>
+                    <p>{regdeadline}</p>
                 </div>
             </div>
             <div class="row justify-content-left">
@@ -121,7 +127,7 @@
                     <p>Freigegebene Domains:</p>
                 </div>
                 <div class="col-auto">
-                    <p>@student.dhbw-mannheim.de</p>
+                    <p>alle</p>
                 </div>
             </div>
         </div>

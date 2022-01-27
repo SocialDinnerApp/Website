@@ -14,7 +14,7 @@ export class UserService {
             "password": password
         });
 
-        const route = '/user/register'
+        const route = '/organizer/register'
 
         var response = await HttpService.run('POST', header, body, route);
         return response;
@@ -28,7 +28,7 @@ export class UserService {
             "email": email,
             "password": password
         });
-        const route = '/user/login'
+        const route = '/organizer/login'
 
         const response = await HttpService.run('POST', header, body, route);
         return response;
