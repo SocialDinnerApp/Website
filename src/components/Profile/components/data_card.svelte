@@ -1,7 +1,35 @@
 <script lang="ts">
-    export let info;
+    import { UserService } from "../../../services/User";
+    import { onMount } from "svelte";
 
-    console.log(info);
+    var username: string = "";
+    var email: string = "";
+    var password: string = undefined;
+    var faculty: string = "";
+    var city: string = "";
+    var university: string = "";
+    let user: Array<any> = [];
+
+
+
+    onMount(async () => {
+        const response = await UserService.getuser();
+        console.log(response);
+        if (response) {
+            user = response[0] as Array<any>;
+            console.log(user);
+                username = user.username,
+                email = user.email,
+                faculty = user.faculty,
+                city = user.city,
+                university = user.university;
+                password=user.password
+                
+           // console.log(user.username);
+        } else {
+            console.log("Geht nicht");
+        }
+    });
 </script>
 
 <div class="card">
@@ -15,15 +43,15 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Username</p>
-                            <h6 class="text-muted f-w-400">{info.Username}</h6>
+                            <h6 class="text-muted f-w-400">{username}</h6>
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Passwort</p>
-                            <h6 class="text-muted f-w-400" id="password" type="password">{info.password}</h6>
+                            <h6 class="text-muted f-w-400" id="password" type="password" >********</h6>
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Email</p>
-                            <h6 class="text-muted f-w-400">{info.Email}</h6>
+                            <h6 class="text-muted f-w-400">{email}</h6>
                         </div>
                     </div>
                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">
@@ -32,15 +60,15 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Universität</p>
-                            <h6 class="text-muted f-w-400">{info.Universität}</h6>
+                            <h6 class="text-muted f-w-400">{university}</h6>
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Stadt</p>
-                            <h6 class="text-muted f-w-400">{info.City}</h6>
+                            <h6 class="text-muted f-w-400">{city}</h6>
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Einrichtung</p>
-                            <h6 class="text-muted f-w-400">{info.faculty}</h6>
+                            <h6 class="text-muted f-w-400">{faculty}</h6>
                         </div>
                     </div>
                 </div>

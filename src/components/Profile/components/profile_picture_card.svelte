@@ -10,7 +10,7 @@
     <div class="card-body">
         <div class="d-flex flex-column align-items-center text-center">
             <img
-                src={i.image}
+                src='images/dhbw_quadrat.jpg'
                 alt="Admin"
                 class="rounded-circle border border-light"
                 width="340px"

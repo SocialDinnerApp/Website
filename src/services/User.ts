@@ -34,23 +34,39 @@ export class UserService {
         return response;
     }
 
-    // public static async getuser() {
-    //     var header = new Headers();
-    //     const response = await HttpService.run('Get', header, undefined, '/update/user', true)
-    //     return response
-    // }
-    public static async update(username, email, faculty, city, university,password) {
+    public static async getuser() {
+        var header = new Headers();
+        const route = '/api/userinformation'
+        const response = await HttpService.run('Get', header, undefined, route, true)
+        return response
+ 
+    }
+    public static async update(username, email, faculty, city, university, password) {
         var header = new Headers();
         header.append("Content-Type", "application/json");
-        const body = JSON.stringify({
+
+        if(password===undefined){ 
+            //console.log('keine Änderung PW ' + password)
+            var body =  JSON.stringify({
            
             "username": username,
-            // "email": email,
-            // "faculty": faculty,
-            // "city": city,
-            // "university": university,
-            // "password": password
-        });
+            "email": email,
+            "faculty": faculty,
+            "city": city,
+            "university": university
+           
+        });}
+        else{  
+            //console.log('änderung PW')
+            var body = JSON.stringify({
+                "username": username,
+                "email": email,
+                "faculty": faculty,
+                "city": city,
+                "university": university,
+                "password": password
+               
+            })}
      
 
         const response = await HttpService.run('PUT', header, body, '/update/user',true);
