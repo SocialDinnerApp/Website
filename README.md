@@ -1,7 +1,6 @@
 # Open Source Contributions, Done's, Learnings and Challenges of Marco and Niclas
 
-## Marco
-**Open Source Contributions:**
+**Open Source Contributions (by Marco):**
 
 - Developed and published deno module for checking if a number is a prime number
     
@@ -65,5 +64,3 @@
 - How to use local storage to persist data in the browser
 - How to integrate Google Maps and allow the user to draw a rectangle on the Map (different project)
 - How to write a deno module and how to publish it on deno.land
-
-## Niclas
