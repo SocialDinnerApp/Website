@@ -26,17 +26,18 @@
 
     async function runOnMount() {
         const result = await EventService.getSingle(eventId);
+        console.log(result)
         if (result) {
-            city = result.data.value.city;
-            date = result.data.value.date;
-            description = result.data.value.description;
-            fee = result.data.value.fee;
-            maxpart = result.data.value.max_participants;
-            name = result.data.value.name;
-            regdeadline = result.data.value.registration_deadline;
-            timedessert = result.data.value.time_dessert;
-            timemain = result.data.value.time_main;
-            timestarter = result.data.value.time_starter;
+            city = result.city;
+            date = result.date;
+            description = result.description;
+            fee = result.fee;
+            maxpart = result.max_participants;
+            name = result.name;
+            regdeadline = result.registration_deadline;
+            timedessert = result.time_dessert;
+            timemain = result.time_main;
+            timestarter = result.time_starter;
         }
     }
 </script>
