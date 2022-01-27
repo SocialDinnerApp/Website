@@ -2,14 +2,16 @@
     import NavigationBar from "../NavigationBar/navigationbar.svelte";
     import ProfilePictureCard from "./components/profile_picture_card.svelte";
     import DataCard from "./components/data_card.svelte";
-    import { info } from "./components/info";
+
     import { push } from "svelte-spa-router";
    
+
+    // go to the next page with click
     function onClickTile() {
         push("#/profile/edit");
-        // console.log('Ja')
+        // console.log('Click works')
     }
-    let user: Array<any> = [];
+   
     
 
 </script>
@@ -40,9 +42,9 @@
                 <div class="col-md-10  ">
                   
                         <div class="card mb-3 " style="max-width: 1500px;">
-                            {#each info as info (info.id)}
-                                <DataCard {info} />
-                            {/each}
+                         
+                         <DataCard  />
+                          
                    
                     </div>
                 </div>
@@ -54,9 +56,7 @@
                 <button
                     on:click={onClickTile}
                     type="button"
-                    class="btn btn-primary py-2 px-3 "
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModa"
+                    class="btn btn-primary py-2 px-3"
                 >
                     Ändern
                 </button>

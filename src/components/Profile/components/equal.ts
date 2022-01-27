@@ -1,14 +1,16 @@
+//check if the Data which is given in the same as the the other
+// If not primary is returned
 
-export  function equal(first, second) {
+export  function equal(primary, second) {
         var result=''
-        if (first === second){
+        if (primary === second){
         result= second
         }
         else{
-            result= first
+            result= primary
         }
         
-        // console.log('Erste Var: ' + first)
+        // console.log('Erste Var: ' + primary)
         // console.log('Zweite Var: ' + second)
         // console.log('Ergebniss: ' + result)
         return result

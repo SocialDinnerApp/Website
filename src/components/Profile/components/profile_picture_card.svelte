@@ -1,11 +1,4 @@
-<script lang="ts">
-    //export let info
-    import { info } from "./info";
-    console.log(info);
-
-    const i = info[0];
-</script>
-
+<!-- the picture cards get c -->
 <div class="card ">
     <div class="card-body">
         <div class="d-flex flex-column align-items-center text-center">

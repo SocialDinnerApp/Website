@@ -4,28 +4,29 @@
 
     var username: string = "";
     var email: string = "";
-    var password: string = undefined;
+    //var password: string = undefined;
     var faculty: string = "";
     var city: string = "";
     var university: string = "";
     let user: Array<any> = [];
 
 
-
+    // get the information about the user
     onMount(async () => {
         const response = await UserService.getuser();
         console.log(response);
         if (response) {
             user = response[0] as Array<any>;
-            console.log(user);
-                username = user.username,
-                email = user.email,
-                faculty = user.faculty,
-                city = user.city,
-                university = user.university;
-                password=user.password
-                
-           // console.log(user.username);
+            //console.log(user);
+
+            username = user["username"],
+            email = user["email"],
+            faculty = user["faculty"],
+            city = user["city"],
+            university = user["university"];
+           // password = user["password"];
+
+            //console.log(user["username"]);
         } else {
             console.log("Geht nicht");
         }
@@ -47,7 +48,13 @@
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Passwort</p>
-                            <h6 class="text-muted f-w-400" id="password" type="password" >********</h6>
+                            <h6
+                                class="text-muted f-w-400"
+                                id="password"
+                                type="password"
+                            >
+                                ********
+                            </h6>
                         </div>
                         <div class="col-sm-4">
                             <p class="m-b-10 f-w-600">Email</p>
@@ -78,62 +85,14 @@
 </div>
 
 <style>
-    body {
-        background-color: #f9f9fa;
-    }
-
-    .padding {
-        padding: 3rem !important;
-    }
-
-    .user-card-full {
-        overflow: hidden;
-    }
-
     .card {
         border-radius: 5px;
-       
+
         border: none;
-        
-    }
-
-    .m-r-0 {
-        margin-right: 0px;
-    }
-
-    .m-l-0 {
-        margin-left: 0px;
-    }
-
-    .user-card-full .user-profile {
-        border-radius: 5px 0 0 5px;
-    }
-
-    .bg-c-lite-green {
-        background: -webkit-gradient(
-            linear,
-            left top,
-            right top,
-            from(#f29263),
-            to(#ee5a6f)
-        );
-        background: linear-gradient(to right, #ee5a6f, #f29263);
-    }
-
-    .user-profile {
-        padding: 20px 0;
     }
 
     .card-block {
         padding: 1.25rem;
-    }
-
-    .m-b-25 {
-        margin-bottom: 25px;
-    }
-
-    .img-radius {
-        border-radius: 5px;
     }
 
     h6 {
@@ -204,16 +163,5 @@
 
     .m-t-40 {
         margin-top: 20px;
-    }
-
-    .user-card-full .social-link li {
-        display: inline-block;
-    }
-
-    .user-card-full .social-link li a {
-        font-size: 20px;
-        margin: 0 10px 0 0;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
     }
 </style>
