@@ -17,7 +17,7 @@
           <div class="col-md-11">
             <div class="card-body">
               <h5 class="card-title">{item.name}</h5>
-              <p class="card-text">{item.text}</p>
+              <p class="card-text">{item.description}</p>
               <InnerTiles bind:item />
               
             </div>

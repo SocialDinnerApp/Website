@@ -19,8 +19,8 @@
         }
     });
 
-    function onClickTile() {
-        push("#/myevents/123");
+    function onClickTile(eventid) {
+        push(`#/myevents/${eventid}`);
     }
 
     function getDateFromString(datestring: string) {
@@ -95,7 +95,7 @@
     {#each events as event}
         {#if checkFilter(event)}
             <div
-                on:click={onClickTile}
+                on:click={() => onClickTile(event._id)}
                 in:fade={{ delay: 0, duration: 500 }}
                 out:fade={{ delay: 0, duration: 0 }}
             >

@@ -10,7 +10,7 @@
         <Icon icon="bytesize:location" color="A785B9" width="30px" />
       </div>
       <div class="card-body">
-        <p class="card-text text-light">{item.zeit}</p>
+        <p class="card-text text-light">{item.date}</p>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
         <Icon icon="bx:bx-calendar"  color="A785B9" width="30px" />
       </div>
       <div class="card-body ">
-        <p class="card-text text-light  ">{item.ort}</p>
+        <p class="card-text text-light  ">{item.city}</p>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
       </div>
       
       <div class="card-body">
-        <p class="card-text text-light justify-content-center" style="position: relative; top:4px;">{item.kosten}</p>
+        <p class="card-text text-light justify-content-center" style="position: relative; top:4px;">{item.fee}</p>
       </div>
     </div>
   </div>

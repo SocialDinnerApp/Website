@@ -1,90 +1,36 @@
-<script>
+<script lang="ts">
     import Chart from "svelte-frappe-charts";
+    import { StatService } from "../../../services/Stats";
 
-    let data = {
-        labels: ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"],
-        datasets: [
-            {
-                values: [10, 12, 3, 9, 8, 15, 9],
-            },
-        ],
-    };
-
-    let linedata = {
-        labels: ["KW21", "KW22", "KW23", "KW24", "KW25", "KW26", "KW27"],
-        datasets: [
-            {
-                values: [10, 12, 13, 19, 28, 35, 49],
-                name: "Teilnehmer",
-            },
-            {
-                values: [20, 24, 26, 38, 56, 70, 98],
-                name: "Einnahmen",
-            },
-        ],
-    };
-
-    let donutdata = {
-        labels: ["Standard", "Vegetarier", "Veganer"],
-        datasets: [
-            {
-                values: [80, 15, 5],
-            },
-        ],
-    };
+    export let name: string;
+    export let eventId: string;
 
     let colors = ["#492774"];
-
-    let barOptions = {
-        spaceRatio: 0.2,
-    };
-
-    let chartRef;
-    const onExport = () => chartRef.exportChart();
 </script>
 
 <div
     class="row g-5 justify-content-left mx-5 mt-0 mb-5 px-3 pb-5 border border-top-0 border-secondary shadow"
 >
     <div class="border-light border-bottom border-1">
-        <h1 class="text-primary">Dinner Hochschule BW MA</h1>
+        <h1 class="text-primary">{name}</h1>
     </div>
-    <div>
-        <h3 class="text-secondary">Interessenten der letzten 7 Tage</h3>
-        <Chart
-            {data}
-            {colors}
-            isNavigable=""
-            valuesOverPoints="1"
-            height="500"
-            type="bar"
-        />
-    </div>
-    <div>
-        <h3 class="text-secondary">
-            Kommulierte Anzahl der Teilnehmer/Einnahmen
-        </h3>
-        <Chart
-            data={linedata}
-            {colors}
-            valuesOverPoints="1"
-            height="500"
-            type="line"
-        />
-    </div>
-    <div>
-        <div class="d-flex justify-content-between">
-            <h3 class="text-secondary">Essgewohnheiten</h3>
-            <p class="text-primary" on:click={onExport}>Export</p>
+    {#await StatService.getPartsForSingleEvent(eventId) then partHist}
+        <div>
+            <h3 class="text-secondary">Anmeldungen in den letzten 30 Tagen</h3>
+            <Chart
+                data={{
+                    labels: partHist["dates"],
+                    datasets: [
+                        {
+                            values: partHist["participations"],
+                        },
+                    ],
+                }}
+                {colors}
+                valuesOverPoints="1"
+                height="500"
+                type="line"
+            />
         </div>
-        <Chart
-            data={donutdata}
-            {colors}
-            valuesOverPoints="1"
-            maxSlices="10"
-            height="500"
-            type="donut"
-            bind:this={chartRef}
-        />
-    </div>
+    {/await}
 </div>

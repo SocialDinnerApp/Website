@@ -17,7 +17,7 @@ export class EventService {
             "max_participants": max_participants,
             "registration_deadline": registration_deadline
         });
-        const route = '/create/event'
+        const route = '/organizer/create/event'
 
         const response = await HttpService.run('POST', header, body, route, true);
         return response;
@@ -25,7 +25,13 @@ export class EventService {
 
     public static async getAll() {
         var header = new Headers();
-        const response = await HttpService.run('GET', header, undefined, '/allevents', true)
+        const response = await HttpService.run('GET', header, undefined, '/organizer/allevents', true)
+        return response
+    }
+
+    public static async getSingle(eventId: string) {
+        var header = new Headers();
+        const response = await HttpService.run('GET', header, undefined, `/organizer/event/${eventId}`, true)
         return response
     }
 }
