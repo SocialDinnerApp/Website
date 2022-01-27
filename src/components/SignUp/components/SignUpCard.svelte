@@ -9,6 +9,7 @@
     var faculty: string = "";
     var city: string = "";
     var university: string = "";
+ let events: Array<any> = [];
 
     async function onSignup() {
         const result = await UserService.signup(
