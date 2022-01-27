@@ -65,7 +65,21 @@
 - Working with deno as runtime environment
 - Improved/Learn typescript skills
 - Improved/Learn HTML and CSS knowledge
-- Increased Bootstrap knowledge
+- Increased/Learn Bootstrap knowledge
 - How to use local storage to persist data in the browser
 - How to integrate Google Maps and allow the user to draw a rectangle on the Map (different project)
 - How to write a deno module and how to publish it on deno.land
+
+**Study material**
+
+- Svelte
+    -    Recreating of svelte projects to learn hands on how it works
+        -    https://www.youtube.com/watch?v=3TVy6GdtNuQ&list=WL&index=5&t=1929s 
+        -    https://www.youtube.com/watch?v=UU7MgYIbtAk&list=WL&index=3&t=3113s 
+    -    documentation: https://svelte.dev/docs 
+- Bootstrap
+    -  https://www.youtube.com/watch?v=GEujtYwX3uQ&t=1788
+    -  documentation: https://getbootstrap.com/docs/5.1/getting-started/introduction/ 
+- TypeScript
+    - https://www.youtube.com/watch?v=BCg4U1FzODs&list=WL&index=6&t=1s 
+
