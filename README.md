@@ -73,9 +73,8 @@
 **Study material**
 
 - Svelte
-    -    Recreating of svelte projects to learn hands on how it works
-        -    https://www.youtube.com/watch?v=3TVy6GdtNuQ&list=WL&index=5&t=1929s 
-        -    https://www.youtube.com/watch?v=UU7MgYIbtAk&list=WL&index=3&t=3113s 
+    -    https://www.youtube.com/watch?v=3TVy6GdtNuQ&list=WL&index=5&t=1929s 
+    -    https://www.youtube.com/watch?v=UU7MgYIbtAk&list=WL&index=3&t=3113s 
     -    documentation: https://svelte.dev/docs 
 - Bootstrap
     -  https://www.youtube.com/watch?v=GEujtYwX3uQ&t=1788
