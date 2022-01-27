@@ -9,14 +9,14 @@
     import { fade } from "svelte/transition";
     import { EventService } from "../../services/Event";
 
-    var curStep = 5;
+    var curStep = 1;
     let isFormValid: boolean;
     let isFormOneValid: boolean;
     let isFormTwoValid: boolean;
     let isFormThreeValid: boolean;
     let isFormFourValid: boolean;
 
-    const totalSteps = 5;
+    const totalSteps = 4;
     $: progress = (curStep / totalSteps) * 100;
 
     // FormVariables
