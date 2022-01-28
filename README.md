@@ -48,6 +48,7 @@
 - Implemented event search on page “MyEvents” which offers to user a possibility to search for event names
     - I complemented this user experience with a “switch”, which can be used to show all events (also past ones) or only upcoming events
 - Developed visual presentation and integration of a fully functional chatbot using state of the art NLP AI, which I have trained to answer FAQ’s of a (future) organizer (Dialogflow)
+- Implement reusable components and functions/ outsourcing of code
 
 **Challenges**
 
