@@ -31,7 +31,7 @@
       </div>
       
       <div class="card-body">
-        <p class="card-text text-light justify-content-center align-middle" style="position: relative; top:4px;">{item.fee}</p>
+        <p class="card-text text-light justify-content-center align-middle" style="position: relative; top:2px;">{item.fee}</p>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
   height: 55px;
   text-align:center;
   position: relative;
-  top: 10px;
+  top: 4px;
 
   }
 </style>
