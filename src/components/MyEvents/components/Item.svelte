@@ -48,6 +48,6 @@
     object-fit: cover;
    
   
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 15px 0px 0px 15px;
   }
 </style>
