@@ -10,7 +10,7 @@
 
     async function onSignin() {
         const result = await UserService.signin(email, password)
-        console.log(result)
+        // console.log(result)
 
         if (result) {
             var userCred = {

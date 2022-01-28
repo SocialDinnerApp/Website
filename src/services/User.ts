@@ -42,7 +42,7 @@ export class UserService {
 
         const response = await HttpService.run('Get', header, undefined, route, true)
         //console.log(HttpService.run('Get', header, undefined, route, true))
-       console.log(response)
+    //    console.log(response)
         return response
  
     }

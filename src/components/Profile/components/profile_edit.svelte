@@ -17,7 +17,7 @@
     // get the information about the user
     onMount(async () => {
         const response = await UserService.getuser();
-        console.log(response);
+        // console.log(response);
         if (response) {
             user = response[0] as Array<any>;
             //console.log(user);
@@ -29,7 +29,7 @@
 
            // console.log(user["username"]);
         } else {
-            console.log("Geht nicht");
+            // console.log("Geht nicht");
         }
     });
     //update the user-information
@@ -44,9 +44,9 @@
             password = equal(password, undefined)
         );
         if (result) {
-            console.log(result);
+            // console.log(result);
         } else {
-            console.log("Geht nicht");
+            // console.log("Geht nicht");
         }
         pop();
     }
@@ -190,8 +190,6 @@
                     on:click={() => update()}
                     type="buttonupedate"
                     class="btn btn-primary py-2 px-3 "
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModa"
                 >
                     Speichern
                 </button>

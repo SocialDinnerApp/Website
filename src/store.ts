@@ -19,4 +19,8 @@ if (storedUserCred) {
   user = writable<User>();
 }
 
-export var backendUrl = readable<string>('http://localhost:8000');
+// For local testing
+// export var backendUrl = readable<string>('http://localhost:8000');
+
+// For productive backend in the cloud 
+export var backendUrl = readable<string>('https://deno-gatsby.herokuapp.com');

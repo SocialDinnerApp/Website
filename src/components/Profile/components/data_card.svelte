@@ -14,7 +14,7 @@
     // get the information about the user
     onMount(async () => {
         const response = await UserService.getuser();
-        console.log(response);
+        // console.log(response);
         if (response) {
             user = response[0] as Array<any>;
             //console.log(user);
@@ -28,7 +28,7 @@
 
             //console.log(user["username"]);
         } else {
-            console.log("Geht nicht");
+            // console.log("Geht nicht");
         }
     });
 </script>

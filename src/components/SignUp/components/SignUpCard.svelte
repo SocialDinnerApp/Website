@@ -20,7 +20,7 @@
             university,
             password
         );
-        console.log(result);
+        // console.log(result);
         if (result) {
             push("#/signin");
         } else {

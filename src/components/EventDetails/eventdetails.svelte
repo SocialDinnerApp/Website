@@ -26,7 +26,7 @@
 
     async function runOnMount() {
         const result = await EventService.getSingle(eventId);
-        console.log(result)
+        // console.log(result)
         if (result) {
             city = result.city;
             date = result.date;

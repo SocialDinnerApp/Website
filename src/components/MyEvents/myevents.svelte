@@ -13,7 +13,7 @@
 
     onMount(async () => {
         const response = await EventService.getAll();
-        console.log(response);
+        // console.log(response);
         if (response) {
             events = response as Array<any>;
         }
@@ -36,7 +36,7 @@
             const eventdate = getDateFromString(event.date)
             const now = new Date()
             if (now > eventdate) {
-                console.log(`Old event: ${event.name}`)
+                // console.log(`Old event: ${event.name}`)
                 return false
             }
         }

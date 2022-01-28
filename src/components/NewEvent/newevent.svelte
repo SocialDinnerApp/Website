@@ -71,7 +71,7 @@
             maxpart,
             getDateAsString(regdeadline)
         );
-        console.log(result);
+        // console.log(result);
         if (result) {
             document.getElementById("openEventCreateConfirm").click();
         } else {
