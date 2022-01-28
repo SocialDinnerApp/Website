@@ -16,7 +16,7 @@
     </div>
     {#await StatService.getPartsForSingleEvent(eventId) then partHist}
         <div>
-            <h3 class="text-secondary">Anmeldungen in den letzten 30 Tagen</h3>
+            <h3 class="text-secondary">Neue Anmeldungen in den letzten 30 Tagen</h3>
             <Chart
                 data={{
                     labels: partHist["dates"],
