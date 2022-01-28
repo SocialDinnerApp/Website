@@ -9,6 +9,7 @@
 **Done**
 
 - Developed whole web application using the svelte compiler
+- Hosting of this this web application on Netlify
 - Setup of project structure including all folders and all files (component-oriented with to possibility of sub-components)
 - Designed and implemented routing concept with the Svelte SPA-Router
 - Developed complete frontend (HTML, CSS) including whole functionality (Typescript) of the following pages
@@ -82,5 +83,6 @@
     -  https://www.youtube.com/watch?v=GEujtYwX3uQ&t=1788
     -  documentation: https://getbootstrap.com/docs/5.1/getting-started/introduction/ 
 - TypeScript
-    - https://www.youtube.com/watch?v=BCg4U1FzODs&list=WL&index=6&t=1s 
+    - https://www.youtube.com/watch?v=BCg4U1FzODs&list=WL&index=6&t=1s
+    - https://www.typescriptlang.org/
 
