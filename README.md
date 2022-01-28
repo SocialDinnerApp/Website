@@ -58,6 +58,7 @@
 - Implementation of a possibility for the organizer, to draw a rectangle of possible geographical participations on Google Maps
 - Implementation of reusable code/ elements  
 - problematical/ analytical problem solving 
+- first time using TypeScript, coming from Python
 
 **Learnings**
 
