@@ -32,6 +32,7 @@
     }
 
     $: checkFilter = (event) => {
+
         if (!isOldEvents) {
             const eventdate = getDateFromString(event.date)
             const now = new Date()
@@ -40,7 +41,8 @@
                 return false
             }
         }
-        return event.name.toLowerCase().includes(searchpattern.toLowerCase());
+        let stringMatch = event.name.toLowerCase().includes(searchpattern.toLowerCase());
+        return stringMatch
     };
 </script>
 
@@ -52,12 +54,12 @@
     <div class="border-light border-bottom border-1">
         <div class="d-flex">
             <h1 class="text-primary">Meine Events</h1>
-            <p
+            <!-- <p
                 class="text-secondary"
                 style="margin-top: auto; margin-left: auto"
             >
                 Ergebnisse: 5
-            </p>
+            </p> -->
         </div>
     </div>
     <div class="container my-5 border-bottom pb-5">
