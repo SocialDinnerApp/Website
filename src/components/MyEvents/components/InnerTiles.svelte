@@ -6,32 +6,32 @@
 <div class="row">
   <div class="col-sm-4">
     <div class="card">
-      <div class="item">
+      <div class="item align-middle">
         <Icon icon="bytesize:location" color="A785B9" width="30px" />
       </div>
       <div class="card-body">
-        <p class="card-text text-light">{item.date}</p>
+        <p class="card-text text-light align-middle">{item.date}</p>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card">
-      <div class="item">
+      <div class="item align-middle">
         <Icon icon="bx:bx-calendar"  color="A785B9" width="30px" />
       </div>
       <div class="card-body ">
-        <p class="card-text text-light  ">{item.city}</p>
+        <p class="card-text text-light align-middle ">{item.city}</p>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
     <div class="card">
-      <div class="item">
+      <div class="item align-middle">
         <Icon icon="oi:euro" color="A785B9" width="25px" />
       </div>
       
       <div class="card-body">
-        <p class="card-text text-light justify-content-center" style="position: relative; top:4px;">{item.fee}</p>
+        <p class="card-text text-light justify-content-center align-middle" style="position: relative; top:4px;">{item.fee}</p>
       </div>
     </div>
   </div>
@@ -49,10 +49,12 @@
     margin: 0px 0px;
     position:relative;
     text-align: center;
+    padding-top: 15px;
+    
   }
   .card-body{
   height: 55px;
-  text-align:baseline;
+  text-align:center;
   position: relative;
   top: 10px;
 

@@ -36,7 +36,7 @@
     background-color: #fff;
     color: #333;
     border-radius: 15px;
-    max-width: 1090px;
+    max-width: 1050px;
     height: auto;
     margin: 30px 20px;
     position: center;
@@ -44,11 +44,10 @@
   img {
     float:center;
     display: block;
-    width: 370px;
-    max-height: 320px;
-  
+    height: 100%;
+    object-fit: cover;
    
   
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px 15px 15px 15px;
   }
 </style>
