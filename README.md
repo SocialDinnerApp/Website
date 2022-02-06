@@ -9,7 +9,7 @@
 **Done**
 
 - Developed whole web application using the svelte compiler
-- Hosting of this this web application on Netlify
+- Hosting of this this web application on Netlify (https://61f578cae32109763b1c557b--wonderful-swirles-60029a.netlify.app/)
 - Setup of project structure including all folders and all files (component-oriented with to possibility of sub-components)
 - Designed and implemented routing concept with the Svelte SPA-Router
 - Developed complete frontend (HTML, CSS) including whole functionality (Typescript) of the following pages
